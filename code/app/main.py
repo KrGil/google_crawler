@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from Routers import data, saveSortedData
+from routers import data, saveSortedData
 
 app = FastAPI()
 
@@ -8,7 +8,7 @@ app.include_router(saveSortedData.router)
 
 @app.get('/')
 def root():
-    return "hello Eazel!"
+    return "welcome!"
 # @app.get("/")
 # async def root():
 #     return {"message": "Hello World"}
